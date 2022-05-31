@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/wheelspin/static/css/main.249efca5.css",
-    "main.js": "/wheelspin/static/js/main.23db2523.js",
+    "main.css": "/wheelspin/static/css/main.57cdd268.css",
+    "main.js": "/wheelspin/static/js/main.3e432619.js",
     "static/js/787.5c416ed3.chunk.js": "/wheelspin/static/js/787.5c416ed3.chunk.js",
-    "static/media/track2.png": "/wheelspin/static/media/track2.17742bd7122099e7a791.png",
+    "static/media/trackNew.png": "/wheelspin/static/media/trackNew.b14961b41ebaa98ac7d9.png",
     "static/media/car.png": "/wheelspin/static/media/car.2da68fb94dc40bd3d452.png",
     "index.html": "/wheelspin/index.html",
-    "main.249efca5.css.map": "/wheelspin/static/css/main.249efca5.css.map",
-    "main.23db2523.js.map": "/wheelspin/static/js/main.23db2523.js.map",
+    "main.57cdd268.css.map": "/wheelspin/static/css/main.57cdd268.css.map",
+    "main.3e432619.js.map": "/wheelspin/static/js/main.3e432619.js.map",
     "787.5c416ed3.chunk.js.map": "/wheelspin/static/js/787.5c416ed3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.249efca5.css",
-    "static/js/main.23db2523.js"
+    "static/css/main.57cdd268.css",
+    "static/js/main.3e432619.js"
   ]
 }
