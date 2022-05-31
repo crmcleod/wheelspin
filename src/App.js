@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
 import './App.css';
 import Car from './Car';
 import Countdown from './countdown';
@@ -18,7 +18,7 @@ function App() {
   const [racePositions, setRacePositions] = useState({})
 
   useEffect(() => {
-    starters?.length && setStartersFixed(starters.replaceAll('\n','').split(','))
+    starters?.length && setStartersFixed(starters.replaceAll('\n', '').split(','))
   }, [starters])
 
   const fps = (fps) => {
@@ -43,8 +43,11 @@ function App() {
   const runnersUp = () => {
     setStart(false)
     setStartModal(true)
-    setStarters(startersFixed.filter(x => x !== winner).join(', '))
-    setStartersFixed(startersFixed.filter(x => x !== winner ))
+    setStarters(startersFixed.filter(x => x !== winner).join(','))
+    setStartersFixed(startersFixed.filter(x => {
+      x.trim()
+      return x !== winner
+    }))
     setWinner(null)
     setWinnerModal(false)
   }
@@ -52,21 +55,23 @@ function App() {
   return (
     <div className="App">
       {!start && !winnerModal && !startModal && <Countdown setStart={setStart} />}
-      {startModal && <GetStarters starters={starters} setStarters={setStarters} setStart={setStart} setStartModal={setStartModal}/>}
-      {winnerModal && <WinnerCard winner={winner} restartRace={restartRace} runnersUp={runnersUp}/>}
-      {start && startersFixed?.length > 0 && startersFixed.map(starter => {
-        console.log(starter)
-        return <Car racePositions={racePositions} setRacePositions={setRacePositions} setWinnerModal={setWinnerModal} key={starter} setWinner={setWinner} name={starter} color={'red'} tick={tick} start={start} setStart={setStart}/>
+      {startModal && <GetStarters startersFixed={startersFixed} starters={starters} setStarters={setStarters} setStart={setStart} setStartModal={setStartModal} />}
+      {winnerModal && <WinnerCard winner={winner} restartRace={restartRace} runnersUp={runnersUp} />}
+      <div id='cars'>
+        {start && startersFixed?.length > 0 && startersFixed.map(starter => {
+          console.log(starter)
+          return <Car racePositions={racePositions} setRacePositions={setRacePositions} setWinnerModal={setWinnerModal} key={starter} setWinner={setWinner} name={starter} color={'red'} tick={tick} start={start} setStart={setStart} />
 
-      })}
-    {/* <div style={{position: 'fixed', top: 0}}> */}
+        })}
+      </div>
+      {/* <div style={{position: 'fixed', top: 0}}> */}
       {/* {start && startersFixed?.length > 0 && startersFixed.map(starter => {
         console.log(starter)
         return <p className='lanes'>{starter}</p> */}
 
       {/* })} */}
-    {/* </div> */}
-       
+      {/* </div> */}
+
     </div>
   );
 }

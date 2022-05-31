@@ -1,11 +1,12 @@
 import react, {useState, useEffect} from 'react'
 
-const GetStarters = ({setStarters, starters, setStart, setStartModal }) => {
+const GetStarters = ({setStarters, starters, setStart, setStartModal, startersFixed }) => {
 
     const handleNameChange = (e) => {
         setStarters(e.target.value)
     }
     const handleStart = () => {
+        (!startersFixed || startersFixed.length < 2) ? alert('There must be at least 2 racers!') :
         setStartModal(false)
     };
 

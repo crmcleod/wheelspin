@@ -1,8 +1,21 @@
 html {
-  background-image: url('./track2.png');
+  background-image: url('./trackNew.png');
+  background-size: cover;
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
+  min-width: 100%;
+  min-height: 100%;
 }
+
+button {
+  cursor: pointer;
+}
+
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .App-logo {
@@ -35,10 +48,12 @@ html {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
+
 #starter {
   width: 100vw;
   height: 100vh;
@@ -52,6 +67,7 @@ html {
   left: 0;
   z-index: 1000;
 }
+
 .game-button {
   width: fit-content;
   padding: 1rem 3rem;
@@ -65,14 +81,17 @@ html {
   border-radius: 0.5rem;
   font-weight: 700;
 }
+
 .small {
   padding: 0.5rem 1.5rem;
   font-size: 1rem;
   letter-spacing: 0 !important;
 }
+
 .invert {
   filter: invert(1);
 }
+
 #winner-buttons {
   width: 80%;
   display: flex;
@@ -81,8 +100,10 @@ html {
   margin: 0 auto;
   height: 40%;
 }
+
 @import url(https://fonts.googleapis.com/css?family=Racing+Sans+One:regular);
-#starter-names{
+
+#starter-names {
   font-family: 'Racing Sans One';
   width: 40%;
   margin: auto;
@@ -91,6 +112,7 @@ html {
   border: none;
   font-size: larger;
 }
+
 #winner-card-modal {
   width: 100vw;
   height: 100vh;
@@ -102,7 +124,9 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  z-index: 1000000;
 }
+
 #winner-card {
   font-family: 'Racing Sans One';
   width: 50%;
@@ -117,8 +141,54 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-
+  z-index: 1000;
+  animation: lightShow 2s infinite forwards;
 }
+
+@keyframes lightShow {
+
+  0%,
+  100% {
+    outline: solid 0.2rem rgb(0, 200, 214);
+    outline-offset: -0.7rem;
+    box-shadow: 0 0 10px 5px rgb(0, 200, 214);
+  }
+
+  10%,
+  90% {
+    outline: solid 0.2rem rgb(214, 146, 0);
+    outline-offset: 0.7rem;
+    box-shadow: 0 0 60px 5px rgb(214, 146, 0);
+  }
+
+  20%,
+  80% {
+    outline: solid 0.2rem rgb(214, 0, 111);
+    outline-offset: -0.7rem;
+    box-shadow: 0 0 10px 5px rgb(214, 0, 111);
+  }
+
+  30%,
+  70% {
+    outline: solid 0.2rem rgb(11, 214, 0);
+    outline-offset: 0.7rem;
+    box-shadow: 0 0 60px 5px rgb(11, 214, 0);
+  }
+
+  40%,
+  60% {
+    outline: solid 0.2rem rgb(103, 0, 214);
+    outline-offset: -0.7rem;
+    box-shadow: 0 0 10px 5px rgb(103, 0, 214);
+  }
+
+  50% {
+    outline: solid 0.2rem rgb(214, 0, 0);
+    outline-offset: 0.7rem;
+    box-shadow: 0 0 60px 5px rgb(214, 0, 0);
+  }
+}
+
 #countdown-block {
   margin: auto;
   width: 60vw;
@@ -129,8 +199,11 @@ html {
   margin: auto;
   z-index: 9999999;
   border-radius: 1rem;
+  /* box-shadow: 0px 0px 40px 10px black; */
 }
-#countdown-r1, #countdown-r2 {
+
+#countdown-r1,
+#countdown-r2 {
   width: 98%;
   height: 90%;
   background-color: rgb(18, 18, 18);
@@ -142,12 +215,13 @@ html {
 }
 
 #countdown-block span {
-  width: 18.5%;
-  height: 90%;
+  width: 16.5%;
+  height: 75%;
   background-color: rgb(59, 59, 59);
   margin: auto;
   border-radius: 50rem;
 }
+
 #countdown-wrapper {
   position: fixed;
   top: 0;
@@ -158,11 +232,70 @@ html {
   height: 100%;
   width: 100%;
 }
+
 .lanes {
-  margin-left: 2rem;
+  /* margin-left: 2rem; */
   font-family: 'Racing Sans One';
   font-size: 1.5rem;
-  color: rgba(255, 255, 255, 0.332);
+  color: rgba(255, 255, 255, 0.762);
   position: fixed;
-  right: 1rem;
+  /* margin-top: 2.5rem; */
+  right: 5rem;
+  transform: skew(-15deg);
+  padding: 0.2rem 2rem;
+  text-align: center;
+}
+
+#skidmark-container {
+  width: 100%;
+  height: 1.5rem;
+  position: absolute;
+  transform: translate(-105%, -210%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.skidmarks {
+  width: 100%;
+  height: 15%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.384));
+  z-index: 0;
+  /* position: absolute; */
+}
+
+.burnout {
+  width: 1rem;
+  height: 1rem;
+  background-color: rgba(128, 128, 128, 0.271);
+  transform: translate(200%);
+  border-radius: 50rem;
+  box-shadow: 0 0 2rem 0.5rem grey;
+}
+
+#cars {
+  height: 90vh;
+  width: 100vw;
+  margin: auto;
+  position: fixed;
+  top: 5vh;
+  z-index: 99 !important;
+}
+
+.car-div {
+  width: 3rem;
+  height: 1.5rem;
+  margin-bottom: 1rem;
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.8rem;
+  z-index: 2;
+  box-shadow: 0px 0px 10px 1px black;
+}
+
+.car-img {
+  position: inherit;
+  width: 100%;
+  transform: translateY(-25%) rotate(-90deg);
+
 }
