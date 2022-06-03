@@ -113,7 +113,7 @@ button {
   font-size: larger;
 }
 
-#winner-card-modal {
+#winner-card-modal, #alert-modal {
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -144,6 +144,29 @@ button {
   z-index: 1000;
   animation: lightShow 2s infinite forwards;
 }
+
+#alert-box {
+  font-family: 'Racing Sans One';
+  width: 50%;
+  height: 40%;
+  margin: auto;
+  background-color: rgb(0, 0, 0);
+  border-radius: 1rem;
+  border: solid 0.2rem rgb(0, 114, 163);
+  outline: solid 0.2rem rgb(0, 200, 214);
+  outline-offset: -0.7rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  z-index: 1000;
+}
+#alert-box button {
+  margin: 1rem auto;
+}
+
+
+
 
 @keyframes lightShow {
 

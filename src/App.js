@@ -59,19 +59,10 @@ function App() {
       {winnerModal && <WinnerCard winner={winner} restartRace={restartRace} runnersUp={runnersUp} />}
       <div id='cars'>
         {start && startersFixed?.length > 0 && startersFixed.map(starter => {
-          console.log(starter)
           return <Car racePositions={racePositions} setRacePositions={setRacePositions} setWinnerModal={setWinnerModal} key={starter} setWinner={setWinner} name={starter} color={'red'} tick={tick} start={start} setStart={setStart} />
 
         })}
       </div>
-      {/* <div style={{position: 'fixed', top: 0}}> */}
-      {/* {start && startersFixed?.length > 0 && startersFixed.map(starter => {
-        console.log(starter)
-        return <p className='lanes'>{starter}</p> */}
-
-      {/* })} */}
-      {/* </div> */}
-
     </div>
   );
 }
