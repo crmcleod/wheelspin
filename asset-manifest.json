@@ -1,17 +1,22 @@
 {
   "files": {
     "main.css": "/wheelspin/static/css/main.1f91b701.css",
-    "main.js": "/wheelspin/static/js/main.ce38c885.js",
+    "main.js": "/wheelspin/static/js/main.31cc1e95.js",
     "static/js/787.5c416ed3.chunk.js": "/wheelspin/static/js/787.5c416ed3.chunk.js",
+    "static/media/cheers.wav": "/wheelspin/static/media/cheers.35c8be32acf6c825eda5.wav",
+    "static/media/racer.mp3": "/wheelspin/static/media/racer.7a0ed25ba49a6d94bd7d.mp3",
+    "static/media/idling.mp3": "/wheelspin/static/media/idling.4322bae3a6c561f15873.mp3",
     "static/media/trackNew.png": "/wheelspin/static/media/trackNew.b14961b41ebaa98ac7d9.png",
+    "static/media/tone1.wav": "/wheelspin/static/media/tone1.393caa1db76341e6861e.wav",
+    "static/media/tone2.mp3": "/wheelspin/static/media/tone2.95c893077684ef38434c.mp3",
     "static/media/car.png": "/wheelspin/static/media/car.2da68fb94dc40bd3d452.png",
     "index.html": "/wheelspin/index.html",
     "main.1f91b701.css.map": "/wheelspin/static/css/main.1f91b701.css.map",
-    "main.ce38c885.js.map": "/wheelspin/static/js/main.ce38c885.js.map",
+    "main.31cc1e95.js.map": "/wheelspin/static/js/main.31cc1e95.js.map",
     "787.5c416ed3.chunk.js.map": "/wheelspin/static/js/787.5c416ed3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1f91b701.css",
-    "static/js/main.ce38c885.js"
+    "static/js/main.31cc1e95.js"
   ]
 }
